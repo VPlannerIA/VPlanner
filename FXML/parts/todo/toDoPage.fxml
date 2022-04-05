@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="601.0" prefWidth="701.0" style="-fx-background-color: #3C3F41;" stylesheets="@../css/toDoPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.todo.toDoController">
+      <children>
+      <Text fill="WHITE" layoutX="486.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Done" textAlignment="RIGHT" wrappingWidth="79.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="117.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pending">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Button fx:id="toDoCreate" alignment="CENTER" layoutX="291.0" layoutY="13.0" mnemonicParsing="false" onAction="#toDoCreate" prefHeight="84.0" prefWidth="108.0" style="-fx-background-radius: 30; -fx-background-insets: 0; -fx-background-color: rgba(0,0,0,0);" textFill="WHITE">
+         <font>
+            <Font size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="75.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/icons/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane layoutX="12.0" layoutY="587.0" prefHeight="14.0" prefWidth="675.0" style="-fx-background-color: #3C3F41;" />
+      <ListView fx:id="pendingListView" editable="true" fixedCellSize="0.0" layoutX="10.0" layoutY="105.0" prefHeight="480.0" prefWidth="330.0" style="-fx-background-color: #2B2B2B; -fx-background-radius: 10; -fx-border-radius: 10;" />
+      <ListView fx:id="doneListView" editable="true" fixedCellSize="0.0" layoutX="360.0" layoutY="105.0" prefHeight="480.0" prefWidth="330.0" style="-fx-background-color: #2B2B2B; -fx-background-radius: 10; -fx-border-radius: 10;" />
+      <Separator layoutX="348.0" layoutY="105.0" orientation="VERTICAL" prefHeight="480.0" />
+      <Pane fx:id="darkenerPane" prefHeight="608.0" prefWidth="701.0" style="-fx-background-color: rgba(0,0,0,0.4);" visible="false" />
+      <Pane fx:id="viewToDoPane" layoutX="50.0" layoutY="61.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #3C3F41; -fx-border-color: white; -fx-border-width: 5; -fx-background-radius: 10; -fx-border-radius: 10;" visible="false">
+         <children>
+            <Button fx:id="closeButton" layoutX="50.0" layoutY="422.0" mnemonicParsing="false" onAction="#oneHandleViewClose" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F04747;" text="Close" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="doneButton" layoutX="400.0" layoutY="422.0" mnemonicParsing="false" onAction="#onHandleViewDone" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #00ff7f;" text="DONE" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Text fx:id="viewToDoText" fill="WHITE" layoutX="150.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40" textAlignment="CENTER" wrappingWidth="300.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="viewToDoDetails" fill="WHITE" layoutX="50.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="500" wrappingWidth="500.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane fx:id="createToDoPane" layoutX="50.0" layoutY="61.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #3C3F41; -fx-border-color: #8C54A1; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+         <children>
+            <TextField fx:id="createTitleField" layoutX="50.0" layoutY="25.0" prefWidth="500.0" promptText="Title" style="-fx-background-color: #2B2B2B; -fx-text-fill: #FFFFFF;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="createDetailField" layoutX="51.0" layoutY="80.0" prefHeight="248.0" prefWidth="500.0" promptText="Details" style="-fx-background-color: #2B2B2B; -fx-text-fill: #FFFFFF; -fx-control-inner-background: #2B2B2B; -fx-prompt-text-fill: #FFFFFF;" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextArea>
+            <ColorPicker id="colorPicker" fx:id="createColorPicker" layoutX="175.0" layoutY="350.0" prefHeight="25.0" prefWidth="250.0" promptText="Color" style="-fx-background-color: #2B2B2B; -fx-text-fill: white; -fx-control-inner-background: white;" stylesheets="@../css/toDoCreatePopup.css">
+               <value>
+                  <Color red="0.5490196347236633" green="0.3294117748737335" blue="0.6313725709915161" />
+               </value>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ColorPicker>
+            <Button fx:id="createButton" layoutX="175.0" layoutY="401.0" mnemonicParsing="false" onAction="#onCreateTodo" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #8C54A1;" text="CREATE" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+   </children>
+</Pane>

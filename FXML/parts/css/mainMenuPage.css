@@ -1,0 +1,9 @@
+.displayButtons{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-font-size: 29;
+    -fx-cursor: hand;
+}
+.displayButtons:hover{
+    -fx-font-size: 30;
+}

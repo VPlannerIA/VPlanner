@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="601.0" prefWidth="701.0" style="-fx-background-color: #3C3F41;" stylesheets="@css/toDoPage.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.userPageController">
+   <children>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="14.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/icons/username.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="14.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/icons/mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="14.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/icons/phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="367.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/icons/instagram.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="367.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/icons/twitter.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="367.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/icons/facebook.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="usernameField" layoutX="95.0" layoutY="162.0" prefHeight="30.0" prefWidth="225.0" promptText="Username" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="twitterField" layoutX="448.0" layoutY="260.0" prefHeight="30.0" prefWidth="225.0" promptText="Twitter" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="facebookField" layoutX="448.0" layoutY="160.0" prefHeight="30.0" prefWidth="225.0" promptText="Facebook" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="mailField" layoutX="95.0" layoutY="260.0" prefHeight="30.0" prefWidth="225.0" promptText="E-Mail" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phoneField" layoutX="95.0" layoutY="360.0" prefHeight="30.0" prefWidth="225.0" promptText="Phone" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="instaField" layoutX="448.0" layoutY="360.0" prefHeight="30.0" prefWidth="225.0" promptText="Instagram" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="logOffButton" layoutX="35.0" layoutY="506.0" mnemonicParsing="false" onAction="#onLogOff" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #8C54A1;" text="Log Off" textFill="WHITE" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Separator layoutX="348.0" layoutY="156.0" orientation="VERTICAL" prefHeight="250.0" />
+      <TextField fx:id="fullNameField" layoutX="35.0" layoutY="35.0" prefHeight="73.0" prefWidth="638.0" promptText="Full Name" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </TextField>
+      <Button fx:id="changeButton" layoutX="548.0" layoutY="506.0" mnemonicParsing="false" onAction="#onChange" prefHeight="60.0" prefWidth="125.0" style="-fx-background-color: #8C54A1;" text="Change" textFill="WHITE" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordField" layoutX="327.0" layoutY="517.0" promptText="Password" style="-fx-background-color: #3C3F41; -fx-border-color: #2B2B2B; -fx-border-radius: 8; -fx-text-fill: #FFFFFF;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="errorMessage" layoutX="333.0" layoutY="496.0" text="Password was Incorrect" textFill="#e52030">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteButton" layoutX="35.0" layoutY="445.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #F04747;" text="Delete " textFill="WHITE" wrapText="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

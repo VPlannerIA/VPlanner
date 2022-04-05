@@ -1,0 +1,16 @@
+.sideButton:hover{
+    -fx-background-color: rgba(140, 84, 161, 0.5);
+    -fx-border-color:#8C54A1;
+    -fx-border-width: 0 0 0 5;
+    -fx-background-insets: 0;
+    -fx-cursor: hand;
+}
+.sideButton{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.clickedButton{
+    -fx-background-color:  #8C54A1;
+    -fx-border-color:  #8C54A1;
+    -fx-border-width: 0 0 0 5;
+    -fx-background-insets: 0;
+}

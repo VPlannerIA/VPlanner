@@ -1,0 +1,7 @@
+.scroll-pane:horizontal, .scroll-bar {
+    -fx-opacity: 0;
+}
+
+.scroll-pane> .corner {
+    -fx-background-color:  #3C3F41;
+}

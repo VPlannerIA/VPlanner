@@ -1,0 +1,41 @@
+.idleButton {
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-background-color: rgba(128, 128, 128, 0.5);
+    -fx-border-color: rgba(128, 128, 128, 1);
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-pref-width: 90;
+    -fx-pref-height: 90;
+}
+
+.idleButton:hover {
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-background-color: rgba(128, 128, 128, 0.5);
+    -fx-border-color: rgba(128, 128, 128, 1);
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-pref-width: 90;
+    -fx-pref-height: 90;
+    -fx-border-width: 3
+}
+
+.mainButtons {
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-pref-width: 90;
+    -fx-pref-height: 90
+}
+
+.mainButtons:hover {
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-pref-width: 90;
+    -fx-pref-height: 90;
+    -fx-border-width: 3;
+}

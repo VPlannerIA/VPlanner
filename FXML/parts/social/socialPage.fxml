@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="601.0" prefWidth="701.0" style="-fx-background-color: #3C3F41;" stylesheets="@../css/toDoPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.social.socialController">
+<!--   <ListView layoutX="10.0" prefHeight="551.0" prefWidth="681.0" stylesheets="@../css/toDoPage.css" />-->
+   <ListView fx:id="contactsListView" editable="true" fixedCellSize="0.0" layoutX="10.0" prefHeight="581.0" prefWidth="681.0" style="-fx-background-color: #3C3F41; -fx-border-radius: 20 20 0 0;" />
+   <Label layoutX="15.0" layoutY="15.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 5 10 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 5, 5);;" text="Contacts" textFill="WHITE">
+      <font>
+         <Font size="35.0" />
+      </font>
+      <padding>
+         <Insets left="50.0" right="50.0" />
+      </padding>
+   </Label>
+   <Separator layoutX="10.0" layoutY="581.0" prefWidth="681.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, -5);" />
+   <Button fx:id="addButton" layoutX="600.0" layoutY="504.0" mnemonicParsing="false" onAction="#onAddButton" prefHeight="22.0" prefWidth="22.0" style="-fx-background-color: rgba(0,0,0,0);">
+      <graphic>
+         <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+            <image>
+               <Image url="@../../../assets/icons/plus.png" />
+            </image>
+         </ImageView>
+      </graphic>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </Button>
+   <Pane fx:id="darkenerPane" prefHeight="601.0" prefWidth="701.0" style="-fx-background-color: rgba(0,0,0,0.4);" visible="false" />
+   <Pane fx:id="createContactPane" layoutX="180.0" layoutY="160.0" prefHeight="282.0" prefWidth="342.0" style="-fx-background-color: #3C3F41; -fx-border-color: #8C54A1; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <children>
+         <Label alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 15 15 5 5;" text="Create Contact" textFill="WHITE">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <TextField fx:id="contactNameTextField" layoutX="47.0" layoutY="70.0" prefWidth="250.0" promptText="Name" style="-fx-background-color: #2b2b2b; -fx-text-fill: white;">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="contactSurnameTextField" layoutX="47.0" layoutY="106.0" prefWidth="250.0" promptText="Surname" style="-fx-background-color: #2b2b2b; -fx-text-fill: white;">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="contactPhoneTextField" layoutX="47.0" layoutY="142.0" prefWidth="250.0" promptText="Phone Number" style="-fx-background-color: #2b2b2b; -fx-text-fill: white;">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </TextField>
+         <TextField fx:id="contactMailTextField" layoutX="47.0" layoutY="178.0" prefWidth="250.0" promptText="E-Mail" style="-fx-background-color: #2b2b2b; -fx-text-fill: white;">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </TextField>
+         <Button layoutX="112.0" layoutY="224.0" mnemonicParsing="false" onAction="#onCreateContact" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #8C54A1;" text="Create" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+      </children>
+   </Pane>
+   <Pane fx:id="viewContactPane" layoutX="180.0" layoutY="160.0" prefHeight="282.0" prefWidth="342.0" style="-fx-background-color: #3C3F41; -fx-border-color: #8C54A1; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <children>
+         <Label alignment="CENTER" layoutX="82.0" layoutY="14.0" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 15 15 5 5;" text="Contact" textFill="WHITE">
+            <font>
+               <Font size="23.0" />
+            </font>
+         </Label>
+         <Button layoutX="112.0" layoutY="224.0" mnemonicParsing="false" onAction="#onDeleteContact" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #8C54A1;" text="Delete" textAlignment="CENTER" textFill="WHITE">
+            <font>
+               <Font size="18.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
+         <Text fx:id="contactNameText" fill="WHITE" layoutX="25.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: " wrappingWidth="300.0">
+            <font>
+               <Font size="21.0" />
+            </font>
+         </Text>
+         <Text fx:id="contactMailText" fill="WHITE" layoutX="25.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail" wrappingWidth="300.0">
+            <font>
+               <Font size="21.0" />
+            </font>
+         </Text>
+         <Text fx:id="contactPhoneText" fill="WHITE" layoutX="25.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:" wrappingWidth="300.0">
+            <font>
+               <Font size="21.0" />
+            </font>
+         </Text>
+         <Text fx:id="contactSurText" fill="WHITE" layoutX="25.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname:" wrappingWidth="300.0">
+            <font>
+               <Font size="21.0" />
+            </font>
+         </Text>
+      </children>
+   </Pane>
+
+</Pane>

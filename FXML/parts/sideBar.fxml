@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="601.0" prefWidth="200.0" style="-fx-background-color: #2B2B2B;" stylesheets="@css/sidebarPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.sidebarController">
+   <Button fx:id="userButton" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="76.0" mnemonicParsing="false" onAction="#onUserButton" prefHeight="60.0" prefWidth="190.0" styleClass="sideButton" text="User" textFill="WHITE">
+      <font>
+         <Font name="Roboto Bold" size="26.0" />
+      </font>
+   </Button>
+   <Button fx:id="mainMenuButton" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="141.0" mnemonicParsing="false" onAction="#onMainMenuButton" prefHeight="60.0" prefWidth="190.0" styleClass="sideButton" text="Main Menu" textFill="WHITE">
+      <font>
+         <Font name="Roboto Bold" size="26.0" />
+      </font>
+   </Button>
+   <Button fx:id="subjectButton" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="206.0" mnemonicParsing="false" onAction="#onSubjectButton" prefHeight="60.0" prefWidth="190.0" styleClass="sideButton" text="Subjects" textFill="WHITE">
+      <font>
+         <Font name="Roboto Bold" size="26.0" />
+      </font>
+   </Button>
+   <Button fx:id="projectButton" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="271.0" mnemonicParsing="false" onAction="#onProjectButton" prefHeight="60.0" prefWidth="190.0" styleClass="sideButton" text="Projects" textFill="WHITE">
+      <font>
+         <Font name="Roboto Bold" size="26.0" />
+      </font>
+   </Button>
+   <Button fx:id="calendarButton" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="336.0" mnemonicParsing="false" onAction="#onCalendarButton" prefHeight="60.0" prefWidth="190.0" styleClass="sideButton" text="Calendar" textFill="WHITE">
+      <font>
+         <Font name="Roboto Bold" size="26.0" />
+      </font>
+   </Button>
+   <Button fx:id="toDoButton" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="401.0" mnemonicParsing="false" onAction="#onToDoButton" prefHeight="60.0" prefWidth="190.0" styleClass="sideButton" text="To-Do" textFill="WHITE">
+      <font>
+         <Font name="Roboto Bold" size="26.0" />
+      </font>
+   </Button>
+   <Button fx:id="socialButton" alignment="BASELINE_LEFT" layoutX="5.0" layoutY="466.0" mnemonicParsing="false" onAction="#onSocialButton" prefHeight="60.0" prefWidth="190.0" styleClass="sideButton" text="Contacts" textFill="WHITE">
+      <font>
+         <Font name="Roboto Bold" size="26.0" />
+      </font>
+   </Button>
+</Pane>

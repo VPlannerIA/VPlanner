@@ -1,0 +1,55 @@
+
+
+/*.list-view .list-cell:even {*/
+/*	-fx-background-color: #2B2B2B;*/
+/*}*/
+/*.list-view .list-cell:odd {*/
+/*	-fx-background-color: #2B2B2B;*/
+/*}*/
+
+/*.list-view .scroll-bar:vertical .track{*/
+/*	-fx-background-color :#2B2B2B;*/
+/*	-fx-border-color :#2B2B2B;*/
+/*	-fx-background-radius : 0.0em;*/
+/*	-fx-border-radius :2.0em;*/
+/*}*/
+
+/*.list-view .scroll-bar:vertical .increment-arrow,*/
+/*.list-view .scroll-bar:vertical .decrement-arrow{*/
+/*	-fx-background-color :derive(black,90.0%);*/
+/*	-fx-background-insets : 2.0, 0.0, 0.0;*/
+/*	-fx-background-radius : 2.0em;*/
+/*}*/
+
+/*.list-view .scroll-bar:horizontal .thumb,*/
+/*.list-view .scroll-bar:vertical .thumb {*/
+/*	-fx-background-color :derive(black,90.0%);*/
+/*	-fx-background-insets : 2.0, 0.0, 0.0;*/
+/*	-fx-background-radius : 2.0em;*/
+/*}*/
+/*#area .content{*/
+/*	-fx-background-color:  #3C3F41;*/
+/*	-fx-border-color: #2B2B2B;*/
+/*}*/
+
+/*.timePicker .slider .track{*/
+/*	-fx-background-color:  #3C3F41;*/
+/*}*/
+/*.timePicker .slider .thumb{*/
+/*	-fx-background-color: #8C54A1;*/
+/*}*/
+/*.timePicker .Label{*/
+/*	-fx-text-fill: white;*/
+/*	-fx-background-color:white;*/
+/*}*/
+
+/*.timePicker > .LocalTimePicker .slider .track{*/
+/*	-fx-background-color:  #3C3F41;*/
+/*}*/
+/*.timePicker > .LocalTimePicker .slider .thumb{*/
+/*	-fx-background-color: #8C54A1;*/
+/*}*/
+/*.timePicker > .JFXTextField{*/
+/*	-fx-text-fill: white;*/
+/*	-fx-background-color:  #3C3F41;*/
+/*}*/

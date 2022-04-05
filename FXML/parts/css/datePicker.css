@@ -1,0 +1,14 @@
+.date-picker{
+    -fx-background-color: #2B2B2B;
+}.date-picker > .arrow-button{
+     -fx-background-color: #2B2B2B;
+ }
+
+.date-picker> .text-field{
+    -fx-background-color: #2B2B2B;
+    -fx-text-fill: white;
+}
+.date-picker> .context-menu{
+    -fx-background-color: #2B2B2B;
+    -fx-text-fill: white;
+}

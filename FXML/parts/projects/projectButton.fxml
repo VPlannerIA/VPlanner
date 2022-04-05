@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.0" prefWidth="661.0" style="-fx-background-color: #2b2b2b; -fx-padding: 0;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.projects.projectButtonController">
+   <children>
+      <Text fx:id="dateText" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="99/99/9999">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Text>
+      <Button mnemonicParsing="false" prefHeight="99.0" prefWidth="681.0" style="-fx-background-color: rgba(140, 84, 161,0.7); -fx-background-radius: 5 20 20 5; -fx-border-color: rgb(140, 84, 161); -fx-border-width: 0 0 0 10; -fx-border-radius: 5;" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <Pane prefHeight="220.0" prefWidth="610.0">
+               <children>
+                  <Text fx:id="buttonSubject" fill="#ffffffe4" layoutX="-1.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Subject}" wrappingWidth="611.6533203125">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="buttonTitle" fill="WHITE" layoutX="-1.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Title}" wrappingWidth="612.6298828125">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </graphic>
+      </Button>
+   </children>
+</VBox>

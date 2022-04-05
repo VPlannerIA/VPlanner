@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="601.0" prefWidth="701.0" style="-fx-background-color: #3C3F41;" stylesheets="@../css/toDoPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.projects.ProjectController">
+   <children>
+      <Text fx:id="noSubjectText" fill="WHITE" layoutX="75.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To create a project you need to have created at least one subject" textAlignment="CENTER" wrappingWidth="551.8935546875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Pane fx:id="contentPane" prefHeight="601.0" prefWidth="701.0">
+         <children>
+            <ListView fx:id="projectListView" editable="true" fixedCellSize="0.0" layoutX="10.0" prefHeight="581.0" prefWidth="687.0" style="-fx-background-color: #3C3F41;" />
+            <Separator layoutX="10.0" layoutY="581.0" prefWidth="681.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, -5);" />
+            <Label layoutX="14.0" layoutY="14.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 10 20 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 5, 5);" text="Project Timeline" textFill="WHITE">
+               <font>
+                  <Font size="34.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
+            </Label>
+            <Button fx:id="addButton" layoutX="605.0" layoutY="507.0" mnemonicParsing="false" onAction="#onAddButton" prefHeight="22.0" prefWidth="22.0" style="-fx-background-color: rgba(0,0,0,0);">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                     <image>
+                        <Image url="@../../../assets/icons/plus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="darkenerPane" prefHeight="601.0" prefWidth="701.0" style="-fx-background-color: rgba(0,0,0,0.4);" visible="false" />
+      <Pane fx:id="createProjectPane" layoutX="308.0" layoutY="61.0" prefHeight="487.0" prefWidth="342.0" style="-fx-background-color: #3C3F41; -fx-border-color: #8C54A1; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+         <children>
+            <Button fx:id="createButton" layoutX="46.0" layoutY="401.0" mnemonicParsing="false" onAction="#onCreateProject" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 10;" text="CREATE" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="projectTitleTextField" layoutX="46.0" layoutY="125.0" prefWidth="250.0" promptText="Project Title" style="-fx-background-color: #2B2B2B; -fx-text-fill: #fff;">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="projectDetailTextArea" layoutX="46.0" layoutY="170.0" prefHeight="116.0" prefWidth="250.0" promptText="Description" style="-fx-background-color: #2B2B2B; -fx-text-fill: #fff; -fx-control-inner-background: #2B2B2B; -fx-prompt-text-fill: #fff;" />
+            <Label layoutX="46.0" layoutY="38.0" prefWidth="250.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 10 10 5 5;" text="Create new Project" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="datePicker" layoutX="46.0" layoutY="291.0" prefHeight="40.0" prefWidth="250.0" promptText="Deadline" style="-fx-background-color: #2b2b2b;" stylesheets="@../css/datePicker.css" />
+            <ComboBox fx:id="subjectComboBox" layoutX="46.0" layoutY="335.0" prefHeight="25.0" prefWidth="250.0" promptText="Subject" stylesheets="@../css/comboBox.css" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <Pane fx:id="projectPane" layoutX="46.0" layoutY="71.0" prefHeight="487.0" prefWidth="614.0" style="-fx-background-color: #3C3F41; -fx-border-color: #8C54A1; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-radius: 10;" visible="false">
+         <children>
+            <Button fx:id="completeButton" layoutX="443.0" layoutY="418.0" mnemonicParsing="false" onAction="#onDeleteProject" prefHeight="39.0" prefWidth="146.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 10;" text="Completed" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="projectTitleLabel" alignment="CENTER" layoutX="46.0" layoutY="38.0" prefHeight="39.0" prefWidth="508.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 10 10 5 5;" text="{Title}" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Text fx:id="projectSubjectText" fill="WHITE" layoutX="46.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="For: {Subject}">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="projectDateText" fill="WHITE" layoutX="300.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deadline: {99/99/9999}">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="projectDetailsText" fill="WHITE" layoutX="46.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Details" textAlignment="JUSTIFY" wrappingWidth="508.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+   </children>
+
+</Pane>

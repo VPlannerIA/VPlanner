@@ -1,0 +1,12 @@
+#colorPicker .text{
+    -fx-text-fill: white;
+}
+.TextArea .content{
+    -fx-background-color:  #3C3F41;
+}
+.color-picker .color-picker-label .text {
+    -fx-text-fill: white;
+}
+.color-picker .color-picker-label{
+    -fx-text-fill: white;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.layout.HBox?>
+<?import jfxtras.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" style="-fx-background-radius: 10 10 0 0; -fx-background-color: rgba(0,0,0,0); -fx-border-radius: 10 10 0 0; -fx-border-color: #F04747;" stylesheets="@parts/css/errorMessageWindow.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.AlertWindowController">
+   <children>
+      <HBox fx:id="titleBar" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="300.0" style="-fx-background-color: #F04747; -fx-border-radius: 10 10 0 0;">
+         <children>
+            <Button fx:id="minimizeButton" mnemonicParsing="false" onAction="#onMinimize" style="-fx-background-color: rgba(0,0,0,0);">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/minimize_button_idle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onClose" prefHeight="28.0" prefWidth="14.0" style="-fx-background-color: rgba(0,0,0,0);">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/close_button_idle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" prefHeight="242.0" prefWidth="300.0" style="-fx-background-color: #3C3F41;">
+         <children>
+            <ScrollPane prefHeight="186.0" prefWidth="300.0" style="-fx-background-color: rgba(0,0,0,0); -fx-border-color: #3C3F41;">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="186.0" prefWidth="286.0" style="-fx-background-color: #3C3F41;">
+                     <children>
+                        <Text fx:id="errorLabel" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" wrappingWidth="287.73675537109375" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Button fx:id="doneButton" mnemonicParsing="false" onAction="#onClose" prefHeight="39.0" prefWidth="195.0" style="-fx-background-color: #F04747;" text="DONE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>

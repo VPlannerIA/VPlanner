@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #2B2B2B;-fx-border-color: #8C54A1; " xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.selectDatabaseController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/Logo/favicon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="184.0" text="Please choose Database:" textFill="WHITE">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="75.0" layoutY="228.0" mnemonicParsing="false" onAction="#onServer" prefHeight="51.0" prefWidth="150.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 8;" text="Server" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="75.0" layoutY="287.0" mnemonicParsing="false" onAction="#onLocalHost" prefHeight="51.0" prefWidth="150.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 8;" text="LocalHost" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="WHITE" layoutX="31.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This page is made in case the server is down." wrappingWidth="237.4775390625" />
+   </children>
+</Pane>

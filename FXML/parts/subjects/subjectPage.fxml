@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="601.0" prefWidth="701.0" style="-fx-background-color: #3C3F41;" stylesheets="@../css/toDoPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IA.Controllers.subject.SubjectController">
+   <children>
+      <Text fx:id="titleText" fill="#fff" layoutX="126.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{Name of Subject}" textAlignment="CENTER" wrappingWidth="500.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="50.0" layoutY="100.0" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 15 5 5 15;" text="Projects" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="284.0" layoutY="100.0" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 15 5 5 15;" text="Grades" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="518.0" layoutY="100.0" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 15 5 5 15;" text="Information" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="62.0" layoutY="130.0" prefHeight="370.0" prefWidth="170.0" style="-fx-background-color: #2B2B2B; -fx-background-radius: 0 0 0 30;">
+         <children>
+            <ListView fx:id="projectListView" layoutX="14.0" prefHeight="371.0" prefWidth="157.0" style="-fx-background-color: #2b2b2b;" stylesheets="@../css/toDoPage.css" />
+         </children></Pane>
+      <Pane layoutX="298.0" layoutY="130.0" prefHeight="370.0" prefWidth="170.0" style="-fx-background-color: #2B2B2B; -fx-background-radius: 0 0 0 30;">
+         <children>
+            <Label alignment="CENTER" layoutX="45.0" layoutY="12.0" prefWidth="125.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 0 0 15;" text="Maximum" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label fx:id="maxGradeField" alignment="CENTER" layoutX="81.0" layoutY="48.0" prefWidth="60.0" style="-fx-background-color: #3C3F41; -fx-background-radius: 5;" text="00%" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Label>
+            <Button fx:id="addGradeButton" layoutX="87.0" layoutY="321.0" mnemonicParsing="false" onAction="#onAddGrade" style="-fx-background-color: #8C54A1; -fx-background-radius: 7;" text="Add" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="gradeTextField" alignment="CENTER" layoutX="19.0" layoutY="277.0" prefHeight="25.0" prefWidth="120.0" promptText="Grade" style="-fx-background-color: #3C3F41; -fx-text-fill: #FFFFFF;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="45.0" layoutY="84.0" prefWidth="125.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 0 0 15;" text="Average" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" layoutX="45.0" layoutY="156.0" prefWidth="125.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 0 0 15;" text="Minimum" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label fx:id="avgGradeField" alignment="CENTER" layoutX="81.0" layoutY="120.0" prefWidth="60.0" style="-fx-background-color: #3C3F41; -fx-background-radius: 5;" text="00%" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label fx:id="minGradeField" alignment="CENTER" layoutX="81.0" layoutY="192.0" prefWidth="60.0" style="-fx-background-color: #3C3F41; -fx-background-radius: 5;" text="00%" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" layoutX="19.0" layoutY="238.0" prefWidth="125.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 15 15 5 5;" text="Add Grade" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="ratioTextField" alignment="CENTER" layoutX="19.0" layoutY="320.0" prefHeight="38.0" prefWidth="60.0" promptText="Ratio" style="-fx-background-color: #3C3F41; -fx-text-fill: #FFFFFF;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+         </children></Pane>
+      <Pane layoutX="532.0" layoutY="130.0" prefHeight="370.0" prefWidth="170.0" style="-fx-background-color: #2B2B2B; -fx-background-radius: 0 0 0 30;">
+         <children>
+            <TextField fx:id="teacherTextField" layoutX="10.0" layoutY="48.0" prefWidth="150.0" promptText="Input Teacher" style="-fx-text-fill: #FFFFFF; -fx-background-color: #3C3F41;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label fx:id="absText" alignment="CENTER" layoutX="60.0" layoutY="195.0" prefWidth="50.0" style="-fx-background-color: #3C3F41; -fx-background-radius: 5;" text="000" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="5.0" right="5.0" top="1.0" />
+               </padding>
+            </Label>
+            <Button fx:id="minusAbsBut" layoutX="30.0" layoutY="196.0" mnemonicParsing="false" onAction="#onMinusABs" style="-fx-background-color: #8C54A1; -fx-background-radius: 5;" text="-" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="plusAbsBut" layoutX="116.0" layoutY="197.0" mnemonicParsing="false" onAction="#onPlusAbs" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5;" text="+" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label alignment="CENTER" layoutX="42.0" layoutY="12.0" prefWidth="125.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 0 0 15;" text="Teacher" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="classTextField" layoutX="7.0" layoutY="120.0" prefWidth="150.0" promptText="Input Class" style="-fx-text-fill: #FFFFFF; -fx-background-color: #3C3F41;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="42.0" layoutY="84.0" prefWidth="125.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 0 0 15;" text="Class" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" layoutX="42.0" layoutY="156.0" prefWidth="125.0" style="-fx-background-color: #8C54A1; -fx-background-radius: 5 0 0 15;" text="Absences" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="15.0" top="2.0" />
+               </padding>
+            </Label>
+            <Button fx:id="changeInfoButton" layoutX="31.0" layoutY="274.0" mnemonicParsing="false" onAction="#onChange" style="-fx-background-color: #8C54A1; -fx-background-radius: 7;" text="Change" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Separator layoutX="465.0" layoutY="100.0" orientation="VERTICAL" prefHeight="400.0" />
+      <Separator layoutX="231.0" layoutY="100.0" orientation="VERTICAL" prefHeight="400.0" />
+      <Separator layoutX="699.0" layoutY="100.0" orientation="VERTICAL" prefHeight="400.0" />
+      <Button layoutX="626.0" layoutY="556.0" mnemonicParsing="false" onAction="#onSubjectDelete" style="-fx-background-color: #F04747;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>
